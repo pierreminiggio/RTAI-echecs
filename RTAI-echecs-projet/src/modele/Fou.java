@@ -17,4 +17,9 @@ public class Fou extends Piece {
     public String getNom() {
         return "Fou "+this.getCouleur();
     }
+    
+    @Override
+    public boolean deplacementPossible(Piece[][] plateau, int iDepart, int jDepart, int iFin, int jFin) {
+        return deplacementPossibleDiagonale(plateau, iDepart, jDepart, iFin, jFin);
+    }
 }

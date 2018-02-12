@@ -18,4 +18,8 @@ public class Tour extends Piece {
         return "Tour "+this.getCouleur();
     }
     
+    @Override
+    public boolean deplacementPossible(Piece[][] plateau, int iDepart, int jDepart, int iFin, int jFin) {
+        return deplacementPossibleLigne(plateau, iDepart, jDepart, iFin, jFin);
+    }
 }

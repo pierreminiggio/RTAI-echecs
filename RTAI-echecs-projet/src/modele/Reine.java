@@ -17,4 +17,17 @@ public class Reine extends Piece {
     public String getNom() {
         return "Reine "+this.getCouleur();
     }
+    
+    @Override
+    public boolean deplacementPossible(Piece[][] plateau, int iDepart, int jDepart, int iFin, int jFin) {
+        if (deplacementPossibleLigne(plateau, iDepart, jDepart, iFin, jFin) == true) {
+            return true;
+        }
+        else if (deplacementPossibleDiagonale(plateau, iDepart, jDepart, iFin, jFin) == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
